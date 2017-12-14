@@ -1,20 +1,25 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Inspire Metadata",
-    "description": "This is the blueprint of the metadata block specific for the Inspire community",
-    "type": "object",
-    "properties": {
-        
-        "Keyword_inspire": {
-            "title": "Keyword INSPIRE",
-            "description": "Keyword INSPIRE description",
-            "type": "array",
-            "items": {
-                "type": "string",
-                "enum": ["Addresses","Administrative Units",
-					"Cadastral parcels","Coordinate reference systems",
-					"Geographical grid systems","Geographical names",
-					"Hydrography","Protected sites","Transport networks",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Inspire Metadata",
+	"description": "This is the blueprint of the metadata block specific for the Inspire community",
+	"type": "object",
+	"properties": {
+		"Keyword_inspire": {
+			"title": "Keyword INSPIRE",
+			"description": "Keyword INSPIRE description",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"enum": [
+					"Addresses",
+					"Administrative Units",
+					"Cadastral parcels",
+					"Coordinate reference systems",
+					"Geographical grid systems",
+					"Geographical names",
+					"Hydrography",
+					"Protected sites",
+					"Transport networks",
 					"Elevation",
 					"Geology",
 					"Land cover",
@@ -25,9 +30,9 @@
 					"Bio-geographical regions",
 					"Buildings",
 					"Energy Resources",
-					"Environmental monitoring Facilities",  
+					"Environmental monitoring Facilities",
 					"Habitats and biotopes",
-					"Human health and safety",      
+					"Human health and safety",
 					"Land use",
 					"Meteorological geographical features",
 					"Mineral Resources",
@@ -39,16 +44,17 @@
 					"Soil",
 					"Species distribution",
 					"Statistical units",
-					"Utility and governmental services"]
-            }
-        },
+					"Utility and governmental services"
+				]
+			}
+		},
 		"Topic_category": {
-			"title":"Topic Category INSPIRE",
-			"description":"Topic Category INSPIRE description",
-			"type":"array",
+			"title": "Topic Category INSPIRE",
+			"description": "Topic Category INSPIRE description",
+			"type": "array",
 			"items": {
-				"type":"string",
-				"enum":[
+				"type": "string",
+				"enum": [
 					"Farming",
 					"Biota",
 					"Boundaries",
@@ -67,69 +73,80 @@
 					"Society",
 					"Structure",
 					"Transportation",
-					"UtilitiesCommunication"					
+					"UtilitiesCommunication"
 				]
 			}
 		},
 		"start-date": {
 			"title": "Start date",
-			"description" : "Temporal reference - start date",
-			"type":"string",
-			"format":"date-time"
+			"description": "Temporal reference - start date",
+			"type": "string",
+			"format": "date-time"
 		},
 		"end-date": {
 			"title": "End date",
-			"description" : "Temporal reference - end date",
-			"type":"string",
-			"format":"date-time"
+			"description": "Temporal reference - end date",
+			"type": "string",
+			"format": "date-time"
 		},
 		"lat_max": {
-		        "description": "Maximum latitude of the dataset", 
-		        "title": "Latitude Max", 
-		        "type": "string"
-		      }, 
+			"title": "Latitude Max",
+			"description": "Maximum latitude of the dataset",
+			"type": "string"
+		},
 		"lat_min": {
-		        "description": "Minimum latitude of the dataset", 
-		        "title": "Latitude Min", 
-		        "type": "string"
-		}, 
+			"title": "Latitude Min",
+			"description": "Minimum latitude of the dataset",
+			"type": "string"
+		},
 		"lon_max": {
-		        "description": "Maximum longitude of the dataset", 
-		        "title": "Longitude Max", 
-		        "type": "string"
-		}, 
+			"title": "Longitude Max",
+			"description": "Maximum longitude of the dataset",
+			"type": "string"
+		},
 		"lon_min": {
-		        "description": "Minimum longitude of the dataset", 
-		        "title": "Longitude Min", 
-		        "type": "string"
-		}, 
-		"resolution_unit":{
-			"title":"Unit of resolution",
-			"description":"Unit of resolution below",
-			"type":"array",
-			"items":{
-				"type":"string"
+			"title": "Longitude Min",
+			"description": "Minimum longitude of the dataset",
+			"type": "string"
+		},
+		"resolution_unit": {
+			"title": "Unit of resolution",
+			"description": "Unit of resolution below",
+			"type": "array",
+			"items": {
+				"type": "string"
 			}
 		},
-		"resolution_value":{
-			"title":"Resolution",
-			"description":"Resolution in above unit",
-			"type":"array",
-			"items":{
-				"type":"integer"
+		"resolution_value": {
+			"title": "Resolution",
+			"description": "Resolution in above unit",
+			"type": "array",
+			"items": {
+				"type": "integer"
 			}
 		},
-		"lineage":{
-	        "description": "Lineage", 
-	        "title": "Lineage", 
-	        "type": "string"		
+		"lineage": {
+			"title": "Lineage",
+			"description": "Lineage",
+			"type": "string"
 		}
-    },
-    "additionalProperties": false,
-    "b2share": {
-        "presentation": {
-            "major": [ "Keyword_inspire", "Topic_category", "start_date"
-				, "end_date", "lat_min","lon_min","lat_max","lon_max","resolution_cm","resolution_inch","lineage"]
-        }
+	},
+	"additionalProperties": false,
+	"b2share": {
+		"presentation": {
+			"major": [
+				"Keyword_inspire",
+				"Topic_category",
+				"start_date",
+				"end_date",
+				"lat_min",
+				"lon_min",
+				"lat_max",
+				"lon_max",
+				"resolution_cm",
+				"resolution_inch",
+				"lineage"
+			]
+		}
 	}
 }
