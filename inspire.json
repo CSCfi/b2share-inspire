@@ -103,17 +103,17 @@
 		        "title": "Longitude Min", 
 		        "type": "string"
 		}, 
-		"resolution_cm":{
-			"title":"resolutions (pixels/cm2)",
-			"description":"Available resolutions in pixels per cm2",
+		"resolution_unit":{
+			"title":"Unit of resolution",
+			"description":"Unit of resolution below",
 			"type":"array",
 			"items":{
-				"type":"integer"
+				"type":"string"
 			}
 		},
-		"resolution_inch":{
-			"title":"resolutions (pixels/inch)",
-			"description":"Available resolutions in pixels per inch",
+		"resolution_value":{
+			"title":"Resolution",
+			"description":"Resolution in above unit",
 			"type":"array",
 			"items":{
 				"type":"integer"
